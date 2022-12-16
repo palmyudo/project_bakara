@@ -9,24 +9,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bakara</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link href="bootstrap-5.0.2-dist/css/headers.css" rel="stylesheet">
 </head>
 <body>
-    <?php
-if(isset($_SESSION["login_name"])) {
-        
-        echo "$_SESSION[login_name]";
-        echo "<br>";
-        echo "<a href='logout.php'>Logout</a>";
-        
-    }
-    else{
-        
-        echo "<a  href='login.php'>Login</a>";
-        echo "<br>";
-        echo "<a  href='sigup.php'>Sign-up</a>";
-        
-    }
-    ?>
+  <?php
+  require_once("menu.php");
+  
+
+
+
+
+  ?>
 </body>
 </html>

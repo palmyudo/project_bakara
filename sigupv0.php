@@ -5,7 +5,7 @@ $uemail=$_POST["email"];
 $uname=$_POST["username"];
 $upassword=$_POST["password"];
 
-$sql="INSERT INTO user VALUES(0,'$uemail','$uname','".md5($upassword)."')";
+$sql="INSERT INTO user VALUES(0,'$uemail','$uname','".md5($upassword)."',1)";
 if($conn->query($sql))
 {   
     $_SESSION['login_name']=$uname ;
