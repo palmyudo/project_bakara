@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "bakara_db";
+$dbname = "db_base";
 
 
 $conn = new mysqli($servername, $username, $password, $dbname);

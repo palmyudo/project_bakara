@@ -30,9 +30,9 @@
     
     <?php
  $sql = "SELECT * 
- FROM products  
-
- ORDER BY product_name";
+ FROM productss ";
+    
+ 
  $result = $conn->query($sql);
  while ($rs = $result->fetch_array()) {
    $cid = $rs['cate_id'];
@@ -50,24 +50,24 @@
     <td></td>
     <td></td>
     <td>
-        <?php echo "<a type='button' class='btn btn-outline-primary me-2' href='admin/edit_cate.php?cate_id=$cid'>edit</a></td>"; ?>
+        <?php echo "<a type='button' class='btn btn-outline-primary me-2' href='admin/edit_cate.php?product_id=$pid'>edit</a>"; 
+        echo "<a type='button' class='btn btn-outline-primary me-2' href='admin/delete_product.php?product_id=$pid'>delete</a>";
+        ?>
     </td>
 
-
     </tr>
-    <tr>
-        <td><a type='button' class='btn btn-outline-primary me-2' href='admin/add_cate.php'>add-product</a></td>
-    </tr>
-    
+        
     <?php
 }
-  
+    
     $conn->close();
 
 } else {
     header('location:index.php');
 }
     ?>
+    <td><a type='button' class='btn btn-outline-primary me-2' href='admin/add_cate.php'>add-product</a></td>
     </table>
+
 </body>
 </html>
