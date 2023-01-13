@@ -29,10 +29,11 @@
         </tr>
     
     <?php
- $sql = "SELECT * 
- FROM productss ";
+ $sql = "SELECT p. *,c.cate_name 
+ FROM productss p INNER Join categorys c ON p.cate_id = c.cate_id ORDER by product_name  ";
+
     
- 
+        
  $result = $conn->query($sql);
  while ($rs = $result->fetch_array()) {
    $cid = $rs['cate_id'];
@@ -46,9 +47,15 @@
         <?= $rs['product_name']; ?>
     </td>
     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>
+        <?=$rs['cate_name']; ?>
+    </td>
+    <td>
+        <?=$rs['product_qty']; ?>
+    </td>
+    <td>
+        <?=$rs['product_price']; ?>
+    </td>
     <td>
         <?php echo "<a type='button' class='btn btn-outline-primary me-2' href='admin/edit_cate.php?product_id=$pid'>edit</a>"; 
         echo "<a type='button' class='btn btn-outline-primary me-2' href='admin/delete_product.php?product_id=$pid'>delete</a>";
@@ -66,7 +73,10 @@
     header('location:index.php');
 }
     ?>
-    <td><a type='button' class='btn btn-outline-primary me-2' href='admin/add_cate.php'>add-product</a></td>
+    <td><a type='button' class='btn btn-outline-primary me-2' href='admin/add_product.php'>add-product</a></td>
+    <td></td>
+    <td><a type='button' class='btn btn-outline-primary me-2' href='admin/add_cate.php'>add-category</a><a type='button' class='btn btn-outline-primary me-2' href='admin/edit_cate.php'>edit</a> </td>
+    <td></td>
     </table>
 
 </body>
