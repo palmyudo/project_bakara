@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['level']) == 0) {
+if (isset($_SESSION['user_level']) == 0) {
     require_once('../db.php');
     if (isset($_POST['product_name']) && trim($_POST['product_name']) != "") {
         $cate_id = $_POST['cate_id'];

@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['level']) == 0) {
+if (isset($_SESSION['user_level']) && $_SESSION['user_level'] == 0) {
     require_once('../db.php');
     if (isset($_REQUEST['cate_name']) && trim($_REQUEST['cate_name']) != "") {
         $sql = "SELECT cate_name FROM categorys WHERE cate_name = ' " . trim($_REQUEST['cate_name']) . "'";
@@ -15,7 +15,7 @@ if (isset($_SESSION['level']) == 0) {
             header('location:../admin.php');
         } else {
             // alert('เฮ้ย! สินค้านี้มีอยู่แล้วนะจ๊ะ');
-            header("location:add_cate.php");
+            header("location:../add_cate.php");
         }
     }
 ?>
@@ -48,5 +48,6 @@ if (isset($_SESSION['level']) == 0) {
 <?php
 } else {
     header('location:../index.php');
+    // echo $_SESSION['user_level'];
 }
 ?>

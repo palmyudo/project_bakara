@@ -75,7 +75,8 @@
     ?>
     <td><a type='button' class='btn btn-outline-primary me-2' href='admin/add_product.php'>add-product</a></td>
     <td></td>
-    <td><a type='button' class='btn btn-outline-primary me-2' href='admin/add_cate.php'>add-category</a><a type='button' class='btn btn-outline-primary me-2' href='admin/edit_cate.php'>edit</a> </td>
+    <td><a type='button' class='btn btn-outline-primary me-2' href='admin/add_cate.php'>add-category</a>
+    <a type='button' class='btn btn-outline-primary me-2' href='admin/change_delete_cate.php'>edit-delete</a> </td>
     <td></td>
     </table>
 
