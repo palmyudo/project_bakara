@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['user_level']) == 0) {
+if (isset($_SESSION['user_level']) && $_SESSION['user_level'] == 0) {
     require_once('../db.php');
     if (isset($_POST['product_name']) && trim($_POST['product_name']) != "") {
         $cate_id = $_POST['cate_id'];
@@ -15,9 +15,10 @@ if (isset($_SESSION['user_level']) == 0) {
 
 
         if ($result->num_rows == 0) {
-            $sql1 = "INSERT INTO productss( `cate_id`, `product_name`, `product_price`, `product_qty`) 
-            VALUES('$cate_id','" . trim($_POST['product_name']) . "','" . $product_price . "','" . $product_qty . "')";
-            $result1 = $conn->query($sql1);
+            $sql1 = "INSERT INTO productss(cate_id,product_name,product_price,product_qty) 
+            VALUES($cate_id','" . trim($_POST['product_name']) . "'," . $product_price . "," . $product_qty . ",'')";
+            $result1 = $conn->query($sql);
+            $id = $conn->insert_id;
         }
         else{
             echo "มีชื่อสินค้าอยู่แล้ว";
