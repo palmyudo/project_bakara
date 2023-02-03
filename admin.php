@@ -57,7 +57,7 @@
         <?=$rs['product_price']; ?>
     </td>
     <td>
-        <?php echo "<a type='button' class='btn btn-outline-primary me-2' href='admin/edit_cate.php?product_id=$pid'>edit</a>"; 
+        <?php echo "<a type='button' class='btn btn-outline-primary me-2' href='admin/edit_product.php?product_id=$pid'>edit</a>"; 
         echo "<a type='button' class='btn btn-outline-primary me-2' href='admin/delete_product.php?product_id=$pid'>delete</a>";
         ?>
     </td>

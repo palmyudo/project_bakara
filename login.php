@@ -12,7 +12,7 @@
 <body class="text-center">
     
     <main class="form-signin">
-      <form action="loginv0.php" method="post">
+      <form action="loginv0.php" method="POST">
         
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
     
@@ -21,7 +21,7 @@
           <label for="floatingInput">usename</label>
         </div>
         <div class="form-floating">
-          <input type="password" class="form-control" id="passwds" name="passwds" placeholder="Password">
+          <input type="password" class="form-control" id="passwds" name="passwords" placeholder="Password">
           <label for="floatingPassword">Password</label>
         </div>
     

@@ -3,7 +3,7 @@
     require_once("db.php"); 
 
 $uname=$_POST["usernames"];
-$upassword=$_POST["passwds"];
+$upassword=$_POST["passwords"];
 
 $sql="SELECT * FROM user WHERE user_name='$uname' AND passwords='".md5($upassword)."'";
 
@@ -31,7 +31,6 @@ if($result->num_rows == 1)
 }
 else
 {
-    
-    header("location: login.php");
+        
+        // header("location: login.php");
 }
-?>
