@@ -1,5 +1,6 @@
 <?php
 // session_start();
+require_once ('db.php');
 ?>
 <header class="p-3 bg-dark text-white">
     <div class="container">
@@ -17,7 +18,7 @@
         </ul>
 
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-          <input type="search" class="form-control form-control-dark" placeholder="หาอะไรอยู่น้าบบ?" aria-label="Search">
+          <input type="search" class="form-control form-control-dark" placeholder="ค้นหาสิ่งของ" aria-label="Search">
         </form>
 
         <div class="text-end">
