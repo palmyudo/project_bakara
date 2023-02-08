@@ -51,9 +51,9 @@ while ($rs = $result->fetch_array()) {
        <?=$rs['product_qty']; ?>
    </td>
    <td>
-       <?=$rs['product_price']; ?>
+       <?= number_format($rs['product_price']) ; ?>
    </td>
-   <td><a type='button' class='btn btn-outline-primary me-2' href='order/order.php'>add to cart</a></td>
+   <td><a type='button' class='btn btn-outline-primary me-2' href='order/order.php?p_id=<?=$pid?>'>เพิ่มลงตะกร้า</a></td>
    <?php
 }
     
