@@ -30,15 +30,15 @@ if (isset($_SESSION['user_level']) && $_SESSION['user_level'] == 0) {
         <link rel="stylesheet" href="font/css/font-awesome.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     </head>
-
-    <body>
+    
+    <body class="text-center">
         <div class="container">
-
+        
             <form class="from" action="" method="get">
                 <div class="from-inline">
                     <input for="cate_name" name="cate_name" placeholder="กรุณาป้อนชื่อประเภทสินค้า ">ประเภทสินค้า</input>
                     <br>
-                    <button type="submit" class="btn btn-outline-light me-2" value="OK!"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>submit!</button>
+                    <button type="submit" class="w-50 btn btn-lg btn-primary" value="OK!"><i class='btn btn-outline-primary me-2' aria-hidden="true"></i>submit !</button>
 
                 </div>
             </form>

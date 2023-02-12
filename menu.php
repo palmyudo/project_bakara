@@ -17,9 +17,17 @@ require_once ('db.php');
           <li><a href="#" class="nav-link px-2 text-white">About</a></li>
         </ul>
 
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-          <input type="search" class="form-control form-control-dark" placeholder="ค้นหาสิ่งของ" aria-label="Search">
-        </form>
+       <form action="search.php" class="form-ground my-3" method="POST">
+<div class="row">
+<div class="col-6">
+    <input type="text" placeholder="กรอกชื่อสินค้า" class="form-control"
+    name="searchs" required>
+</div>
+<div class="col-6">
+<input type="submit" value="ค้าหา" class="btn btn-warning">
+</div>
+</div>
+</form>
 
         <div class="text-end">
         <?php
